@@ -1,4 +1,5 @@
 plugins {
+    application
     kotlin("jvm") version "2.2.0"
 }
 
@@ -7,9 +8,14 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    maven("https://jitpack.io")
 }
 
 dependencies {
+    dependencies {
+        implementation("com.github.czadmedia:FileIndexer:v0.1.1")
+    }
+
     testImplementation(kotlin("test"))
 }
 
@@ -18,4 +24,12 @@ tasks.test {
 }
 kotlin {
     jvmToolchain(17)
+}
+
+application {
+    mainClass.set("org.example.Main")
+}
+
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`   // <-- lets your REPL read from the terminal
 }

@@ -1,0 +1,1 @@
+An example app making use of the FileIndexer library
