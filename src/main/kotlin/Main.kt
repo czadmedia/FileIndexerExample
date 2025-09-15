@@ -28,7 +28,7 @@ object Main {
 
                     val query = bufferedReader.readLine() ?: break
 
-                    val hits = service.querySequence(query.trim())
+                    val hits = service.querySequence(query.trim()).get()
 
                     if (hits.isEmpty()) println("No results.")
                     else hits.sortedBy { it.toString() }.forEach { println(" - $it") }
