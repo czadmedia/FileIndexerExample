@@ -13,7 +13,7 @@ repositories {
 
 dependencies {
     dependencies {
-        implementation("com.github.czadmedia:FileIndexer:v0.1.3")
+        implementation("com.github.czadmedia:FileIndexer:v0.1.4")
     }
 
     testImplementation(kotlin("test"))
