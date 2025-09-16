@@ -31,5 +31,5 @@ application {
 }
 
 tasks.named<JavaExec>("run") {
-    standardInput = System.`in`   // <-- lets your REPL read from the terminal
+    standardInput = System.`in`
 }
